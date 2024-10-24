@@ -42,6 +42,8 @@ insert_at(El, Pos, [H|T], [H|R]) :-
 first_negative_std(L, Pos) :-
     nth1(Pos, L, El),
     El < 0, !.
+first_negative_std(_, _) :-
+    fail.
 
 % Без стандартных предикатов
 first_negative_position(L, Pos) :-
